@@ -107,7 +107,7 @@ def test_accuracy(model,loader,device = "cpu"):
             images, labels = data[0].to(device), data[1].to(device)
             outputs = model(images);
             _, predicted = torch.max(outputs.data, 1)
-            total += labels.size(0;
+            total += labels.size(0);
             correct += (predicted == labels).sum().item()
     return correct / total
 def train(model,data):
